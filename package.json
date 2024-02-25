@@ -1,0 +1,32 @@
+{
+  "name": "monorepo",
+  "private": "true",
+  "version": "1.0.0",
+  "workspaces": {
+    "packages": [
+      "react-app",
+      "nextjs-app",
+      "nest-app"
+    ]
+  },
+  "scripts": {
+    "start": "vite --port 3006 & set NODE_ENV=development & nodemon",
+    "lint": "yarn workspaces run lint",
+    "build": "yarn workspaces run build",
+    "wsi": "yarn workspaces info"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "eslint-config-prettier": "^7.2.0",
+    "eslint-import-resolver-typescript": "^2.4.0",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-jest": "^24.1.5",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-prettier": "^3.3.1",
+    "eslint-plugin-promise": "^4.3.1",
+    "eslint-plugin-react-hooks": "^4.3.0",
+    "eslint-plugin-spellcheck": "^0.0.19",
+    "eslint-plugin-unicorn": "^39.0.0",
+    "husky": "^7.0.4"
+  }
+}
